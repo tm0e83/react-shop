@@ -1,0 +1,7 @@
+.caret-button {
+  @apply cursor-pointer flex items-center border rounded border-transparent transition-all duration-300 hover:text-orange-400 hover:border-orange-400;
+}
+
+.caret-button[disabled] {
+  @apply cursor-default text-gray-300 transition-none hover:border-transparent hover:text-gray-300;
+}
