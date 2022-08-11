@@ -8,8 +8,13 @@ export const generalSlice = createSlice({
     pageIndex: 0,
     productsPerPage: 5,
     productsTotal: 0,
+    uid: null,
   },
   reducers: {
+    setUID: (state, action) => {
+      state.uid = action.payload;
+    },
+
     setProductsTotal: (state, action) => {
       state.productsTotal = action.payload;
     },
@@ -36,5 +41,5 @@ export const generalSlice = createSlice({
   },
 });
 
-export const { addProductToBasket, removeProductFromBasket, setProducts, setProductsTotal, setPageIndex } = generalSlice.actions;
+export const { addProductToBasket, removeProductFromBasket, setProducts, setProductsTotal, setPageIndex, setUID } = generalSlice.actions;
 export default generalSlice.reducer;

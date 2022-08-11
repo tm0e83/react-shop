@@ -1,9 +1,8 @@
 import './Pagination.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { setPageIndex } from './generalSlice';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
 
-const Pagination = () => {
+const Pagination = ({ setPageIndex }) => {
   const dispatch = useDispatch();
   const productsPerPage = useSelector(state => state.general.productsPerPage);
   const pageIndex = useSelector(state => state.general.pageIndex);

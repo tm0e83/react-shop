@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  @apply px-3 py-2 outline-none border border-gray-500 w-full rounded;
+
+  &.error {
+    @apply border-red-600;
+  }
+}
+
+.button {
+  @apply bg-orange-400 text-white px-3 py-2 rounded;
+
+  &.hollow {
+    @apply bg-transparent text-orange-400 border border-orange-400;
+  }
+}
+
+.page-headline {
+  @apply flex gap-2 items-center text-4xl mb-8;
+}

@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { removeProductFromBasket } from './generalSlice';
+import { removeProductFromBasket } from 'generalSlice';
 
 function Product({ data }) {
   const dispatch = useDispatch();
@@ -12,8 +12,8 @@ function Product({ data }) {
   };
 
   return (
-    <div className="flex gap-3">
-      <div className="min-w-[50px] max-w-[50px]">
+    <div className="flex gap-6">
+      <div className="min-w-[125px] max-w-[125px]">
         <img
           className="max-w-full"
           src={data.thumbnail}
@@ -22,8 +22,11 @@ function Product({ data }) {
       </div>
       <div className="grow">
         <div className="flex gap-3 justify-between">
-          <div className="font-bold">{data.title}</div>
-          <div className="font-black">{formattedPrice()}</div>
+          <div>
+            <div className="font-bold text-xl">{data.title}</div>
+            <div>{data.description}</div>
+          </div>
+          <div className="font-black text-xl">{formattedPrice()}</div>
         </div>
         <div>
           <button

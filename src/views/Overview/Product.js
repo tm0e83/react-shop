@@ -1,8 +1,6 @@
-// import './Product.css';
-
 import { StarIcon } from '@heroicons/react/solid';
 import { useDispatch } from 'react-redux';
-import { addProductToBasket } from './generalSlice';
+import { addProductToBasket } from 'generalSlice';
 import { CheckIcon } from '@heroicons/react/solid';
 
 function AddButton({ data }) {
